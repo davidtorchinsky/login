@@ -8,8 +8,8 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-logi
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-   user: SocialUser;
-   loggedIn: boolean;
+   private user: SocialUser;
+   private loggedIn: boolean;
 
   constructor(private authService: AuthService) { }
  
@@ -17,9 +17,9 @@ export class LoginComponent implements OnInit {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
  
-  signInWithFB(): void {
+ /*  signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-  } 
+  }  */
  
   signOut(): void {
     this.authService.signOut();

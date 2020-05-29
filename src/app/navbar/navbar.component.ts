@@ -8,7 +8,7 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-logi
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  user: SocialUser;
+  private user: SocialUser;
   private loggedIn: boolean;
 
   constructor(private authService: AuthService) { }
