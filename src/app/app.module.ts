@@ -1,13 +1,20 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Rutas
+import {APP_ROUTING} from './app.routes';
+
+//Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 
+//Servicios
 //para el login
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+import { HomeComponent } from './home/home.component';
  
  
 let config = new AuthServiceConfig([
@@ -29,11 +36,13 @@ export function provideConfig() {
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    SocialLoginModule
+    SocialLoginModule,
+    APP_ROUTING
   ],
   providers: [
     {
